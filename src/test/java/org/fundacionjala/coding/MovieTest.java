@@ -1,27 +1,31 @@
-package movies;
+package org.fundacionjala.coding;
 
+import org.fundacionjala.coding.fernando.Movie;
+import org.fundacionjala.coding.fernando.RegularPrice;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class MovieTest {
+    private final int priceCode = 15;
+    private final int expected = 0;
 
     @Test
     public void getPriceCode() {
-        Movie movie = new RegularPrice("Fast",15);
-        assertEquals(15,movie.getPriceCode());
+        Movie movie = new RegularPrice("Fast", priceCode);
+        assertEquals(expected, movie.getPriceCode());
     }
 
     @Test
     public void setPriceCode() {
-        Movie movie = new RegularPrice("Fast",15);
-        movie.setPriceCode(25);
-        assertEquals(25,movie.getPriceCode());
+        Movie movie = new RegularPrice("Fast", priceCode);
+        movie.setPriceCode(expected);
+        assertEquals(expected, movie.getPriceCode());
     }
 
     @Test
     public void getTitle() {
-        Movie movie = new RegularPrice("Fast",15);
-        assertEquals("Fast",movie.getTitle());
+        Movie movie = new RegularPrice("Fast", priceCode);
+        assertEquals("Fast", movie.getTitle());
     }
 }

@@ -1,18 +1,20 @@
 package org.fundacionjala.coding.fernando;
 
 public class ChildrensPrice extends Movie {
-    public ChildrensPrice(String title, int priceCode) {
+    private final double childrenPrice = 1.5;
+    private final int days = 3;
+    public ChildrensPrice(final String title, int priceCode) {
         super(title, priceCode);
     }
-
+    @Override
     public int getPriceCode() {
         return CHILDRENS;
     }
-
+    @Override
     public double getCharge(int daysRented) {
-        double result = 1.5;
-        if (daysRented > 3) {
-            result += (daysRented - 3) * 1.5;
+        double result = 0;
+        if (daysRented > days) {
+            result += (daysRented - days) * childrenPrice;
         }
         return result;
     }

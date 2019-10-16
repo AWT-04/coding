@@ -1,27 +1,26 @@
 package org.fundacionjala.coding.fernando;
+public class Rental {
+    private Movie movie;
+    private int daysRented;
 
-class Rental {
-    private Movie _movie;
-    private int _daysRented;
-
-    public Rental(Movie movie, int daysRented) {
-        _movie = movie;
-        _daysRented = daysRented;
+    public Rental(final Movie movie, int daysRented) {
+        this.movie = movie;
+        this.daysRented = daysRented;
     }
 
     public double getCharge() {
-        return _movie.getCharge(_daysRented);
+        return movie.getCharge(daysRented);
     }
 
     public int getDaysRented() {
-        return _daysRented;
+        return daysRented;
     }
 
     public Movie getMovie() {
-        return _movie;
+        return movie;
     }
 
     public int getFrequentRenterPoints() {
-        return _movie.getFrequentRenterPoints(_daysRented);
+        return movie.getFrequentRenterPoints(daysRented);
     }
 }

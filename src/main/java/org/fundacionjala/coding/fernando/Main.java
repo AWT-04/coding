@@ -1,6 +1,7 @@
 package org.fundacionjala.coding.fernando;
 
 public class Main {
-    public static void main(String[] args) {
+    private static void main(final String[] args) {
+        throw new UnsupportedOperationException();
     }
 }
