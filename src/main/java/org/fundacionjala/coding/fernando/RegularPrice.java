@@ -1,4 +1,4 @@
-package movies;
+package org.fundacionjala.coding.fernando;
 
 public class RegularPrice extends Movie {
     public RegularPrice(String title, int priceCode) {
@@ -6,7 +6,7 @@ public class RegularPrice extends Movie {
     }
 
     public int getPriceCode() {
-        return Movie.REGULAR;
+        return REGULAR;
     }
 
     public double getCharge(int daysRented) {

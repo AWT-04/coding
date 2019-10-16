@@ -1,4 +1,4 @@
-package movies;
+package org.fundacionjala.coding.fernando;
 
 public class ChildrensPrice extends Movie {
     public ChildrensPrice(String title, int priceCode) {
@@ -6,13 +6,14 @@ public class ChildrensPrice extends Movie {
     }
 
     public int getPriceCode() {
-        return Movie.CHILDRENS;
+        return CHILDRENS;
     }
 
     public double getCharge(int daysRented) {
         double result = 1.5;
-        if (daysRented > 3)
+        if (daysRented > 3) {
             result += (daysRented - 3) * 1.5;
+        }
         return result;
     }
 }

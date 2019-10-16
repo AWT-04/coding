@@ -1,4 +1,4 @@
-package movies;
+package org.fundacionjala.coding.fernando;
 
 class Rental {
     private Movie _movie;

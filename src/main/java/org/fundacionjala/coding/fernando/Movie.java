@@ -1,4 +1,4 @@
-package movies;
+package org.fundacionjala.coding.fernando;
 
 public abstract class Movie {
     public static final int CHILDRENS = 2;
