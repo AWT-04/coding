@@ -1,9 +1,6 @@
-package movies;
+package org.fundacionjala.coding.Raul.movies;
 
-public class Movie {
-    public static final int CHILDRENS = 2;
-    public static final int REGULAR = 0;
-    public static final int NEW_RELEASE = 1;
+public abstract class Movie {
     private String _title;
     private int _priceCode;
 
@@ -24,4 +21,5 @@ public class Movie {
         return _title;
     }
 
+    public abstract double statement();
 }
