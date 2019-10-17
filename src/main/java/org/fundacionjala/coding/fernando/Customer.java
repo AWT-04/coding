@@ -26,20 +26,21 @@ class Customer {
 
     public String statement() {
         Iterator iterator = this.rentals.iterator();
-        String result = "Rental Record for " + getName() + "\n";
+        StringBuilder builder = new StringBuilder();
+        builder = builder.append("Rental Record for " + getName() + "\n");
         while (iterator.hasNext()) {
 
             Rental each = (Rental) iterator.next();
             //show figures for this rental
-            result += "\t" + each.getMovie().getTitle() + "\t"
-                    + each.getCharge() + "\n";
+            builder = builder.append("\t" + each.getMovie().getTitle() + "\t"
+                    + each.getCharge() + "\n");
         }
         //add footer lines
-        result += "Amount owed is " + getTotalCharge()
-                + "\n";
-        result += "You earned " + getTotalFrequentRenterPoints()
-                + " frequent renter points";
-        return result;
+        builder = builder.append("Amount owed is " + getTotalCharge()
+                + "\n");
+        builder = builder.append("You earned " + getTotalFrequentRenterPoints()
+                + " frequent renter points");
+        return builder.toString();
     }
 
     public double getTotalCharge() {

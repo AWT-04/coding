@@ -3,16 +3,12 @@ package org.fundacionjala.coding;
 import org.fundacionjala.coding.fernando.Movie;
 import org.fundacionjala.coding.fernando.RegularPrice;
 import org.junit.Test;
+
 import static org.junit.Assert.assertNotEquals;
 
 public class RegularPriceTest {
     private static final double EXPECTED = 4.5;
     private static final int DAYS = 5;
-    @Test
-    public void getPriceCode() {
-        Movie movie = new RegularPrice("Fast");
-
-    }
 
     @Test
     public void getCharge() {
