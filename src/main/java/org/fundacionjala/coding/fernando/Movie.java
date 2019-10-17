@@ -8,8 +8,9 @@ public abstract class Movie {
     public int getFrequentRenterPoints(int daysRented) {
         if (daysRented > 1) {
             return getFrequentRenterPoints(daysRented);
-        } else
+        } else {
             return 1;
+        }
     }
 
     public Movie(final String title) {
