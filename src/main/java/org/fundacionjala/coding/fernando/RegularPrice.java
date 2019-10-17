@@ -1,7 +1,7 @@
 package org.fundacionjala.coding.fernando;
 
 public class RegularPrice extends Movie {
-    private final double regular = 1.5;
+    private static final double REGULARVAR = 1.5;
 
     public RegularPrice(final String title, int priceCode) {
         super(title, priceCode);
@@ -16,7 +16,7 @@ public class RegularPrice extends Movie {
     public double getCharge(int daysRented) {
         double result = 2;
         if (daysRented > 2) {
-            result += (daysRented - 2) * regular;
+            result += (daysRented - 2) * REGULARVAR;
         }
         return result;
     }

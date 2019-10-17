@@ -32,7 +32,6 @@ public abstract class Movie {
                 priceCode = getPriceCode();
                 break;
             default:
-                System.out.println("Please try again");
         }
     }
 

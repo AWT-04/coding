@@ -1,7 +1,7 @@
 package org.fundacionjala.coding.fernando;
 
 public class NewReleasePrice extends Movie {
-    private final int days = 3;
+    private static final double DAYS = 3;
     public NewReleasePrice(final String title, int priceCode) {
         super(title, priceCode);
     }
@@ -11,7 +11,7 @@ public class NewReleasePrice extends Movie {
     }
     @Override
     public double getCharge(int daysRented) {
-        return daysRented * days;
+        return daysRented * DAYS;
     }
     @Override
     public int getFrequentRenterPoints(int daysRented) {
