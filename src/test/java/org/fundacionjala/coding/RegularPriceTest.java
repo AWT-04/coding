@@ -8,18 +8,18 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
 public class RegularPriceTest {
-    private final int priceCode = 7;
-    private final double expected = 4.5;
-    private final int days = 5;
+    private static final int PRICECODE = 7;
+    private static final double EXPECTED = 4.5;
+    private static final int DAYS = 5;
     @Test
     public void getPriceCode() {
-        Movie movie = new RegularPrice("Fast", priceCode);
+        Movie movie = new RegularPrice("Fast", PRICECODE);
         assertEquals(0, movie.getPriceCode());
     }
 
     @Test
     public void getCharge() {
-        Movie movie = new RegularPrice("Fast", priceCode);
-        assertNotEquals(expected, movie.getCharge(days), 0.0);
+        Movie movie = new RegularPrice("Fast", PRICECODE);
+        assertNotEquals(EXPECTED, movie.getCharge(DAYS), 0.0);
     }
 }

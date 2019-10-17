@@ -8,18 +8,18 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class NewReleasePriceTest {
-    private final int priceCode = 7;
-    private final double expected = 0.0;
+    private static final int PRICECODE = 7;
+    private static final double EXPECTED = 0.0;
 
     @Test
     public void getPriceCode() {
-        Movie movie = new NewReleasePrice("Fast", priceCode);
+        Movie movie = new NewReleasePrice("Fast", PRICECODE);
         assertEquals(1, movie.getPriceCode());
     }
 
     @Test
     public void getCharge() {
-        Movie movie = new ChildrensPrice("Fast", priceCode);
-        assertEquals(expected, movie.getCharge(2), 0.0);
+        Movie movie = new ChildrensPrice("Fast", PRICECODE);
+        assertEquals(EXPECTED, movie.getCharge(2), 0.0);
     }
 }

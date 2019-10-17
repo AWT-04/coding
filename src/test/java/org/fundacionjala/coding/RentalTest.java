@@ -1,4 +1,4 @@
-package movies;
+package org.fundacionjala.coding;
 
 import org.fundacionjala.coding.fernando.ChildrensPrice;
 import org.fundacionjala.coding.fernando.Movie;
@@ -9,21 +9,21 @@ import org.junit.Test;
 import static org.junit.Assert.assertTrue;
 
 public class RentalTest {
-    private final int priceCode = 15;
-    private final double expected = 5;
-    private final int days = 10;
+    private static final int PRICECODE = 15;
+    private static final double EXPECTED = 5;
+    private static final int DAYS = 10;
 
     @Test(expected = AssertionError.class)
     public void getDaysRented() {
-        Movie movie = new NewReleasePrice("Fast", priceCode);
-        Rental rental = new Rental(movie, days);
-        assertTrue(rental.getDaysRented() == expected);
+        Movie movie = new NewReleasePrice("Fast", PRICECODE);
+        Rental rental = new Rental(movie, DAYS);
+        assertTrue(rental.getDaysRented() == EXPECTED);
     }
 
     @Test
     public void getMovie() {
-        Movie movie = new ChildrensPrice("Fast", priceCode);
-        Rental rental = new Rental(movie, days);
+        Movie movie = new ChildrensPrice("Fast", PRICECODE);
+        Rental rental = new Rental(movie, DAYS);
         assertTrue(rental.getMovie() == movie);
     }
 }
