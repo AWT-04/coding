@@ -3,13 +3,8 @@ package org.fundacionjala.coding.fernando;
 public class RegularPrice extends Movie {
     private static final double REGULARVAR = 1.5;
 
-    public RegularPrice(final String title, int priceCode) {
-        super(title, priceCode);
-    }
-
-    @Override
-    public int getPriceCode() {
-        return REGULAR;
+    public RegularPrice(final String title) {
+        super(title);
     }
 
     @Override
