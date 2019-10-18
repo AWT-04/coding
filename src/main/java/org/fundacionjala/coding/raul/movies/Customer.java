@@ -1,30 +1,31 @@
-package org.fundacionjala.coding.Raul.movies;
+package org.fundacionjala.coding.raul.movies;
 
+import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Vector;
 
 class Customer {
-    private String _name;
-    private Vector _rentals = new Vector();
+    private String name;
+    private Vector rentals = new Vector();
 
     public Customer(String name) {
-        _name = name;
+        this.name = name;
     }
 
     public void addRental(Rental arg) {
 
-        _rentals.addElement(arg);
+        rentals.add(arg);
     }
 
     public String getName() {
 
-        return _name;
+        return name;
     }
 
     public String statement() {
         double totalAmount = 0;
         int frequentRenterPoints = 0;
-        Enumeration rentals = _rentals.elements();
+        Enumeration rentals = this.rentals.elements();
         String result = "Rental Record for " + getName() + "\n";
 
         while (rentals.hasMoreElements()) {
@@ -38,13 +39,13 @@ class Customer {
 
             //show figures for this rental
             result += "\t" + each.getMovie().getTitle() + "\t" +
-                    String.valueOf(thisAmount) + "\n";
+                    thisAmount + "\n";
             totalAmount += thisAmount;
         }
         //add footer lines
-        result += "Amount owed is " + String.valueOf(totalAmount) +
+        result += "Amount owed is " + totalAmount +
                 "\n";
-        result += "You earned " + String.valueOf(frequentRenterPoints)
+        result += "You earned " + frequentRenterPoints
                 +
                 " frequent renter points";
         return result;

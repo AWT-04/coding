@@ -1,4 +1,4 @@
-package org.fundacionjala.coding.Raul.movies;
+package org.fundacionjala.coding.raul.movies;
 
 public class RegularMovie extends Movie {
     public static final int REGULAR = 0;

@@ -1,24 +1,24 @@
-package org.fundacionjala.coding.Raul.movies;
+package org.fundacionjala.coding.raul.movies;
 
 public abstract class Movie {
-    private String _title;
-    private int _priceCode;
+    private String title;
+    private int priceCode;
 
     public Movie(String title, int priceCode) {
-        _title = title;
-        _priceCode = priceCode;
+        this.title = title;
+        this.priceCode = priceCode;
     }
 
     public int getPriceCode() {
-        return _priceCode;
+        return priceCode;
     }
 
     public void setPriceCode(int arg) {
-        _priceCode = arg;
+        priceCode = arg;
     }
 
     public String getTitle() {
-        return _title;
+        return title;
     }
 
     public abstract double statement();

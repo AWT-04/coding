@@ -1,4 +1,4 @@
-package org.fundacionjala.coding.Raul.movies;
+package org.fundacionjala.coding.raul.movies;
 
 public class ChildrenMovie extends Movie {
     public static final int CHILDRENS = 2;

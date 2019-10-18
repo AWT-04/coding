@@ -1,4 +1,4 @@
-package org.fundacionjala.coding.Raul.movies;
+package org.fundacionjala.coding.raul.movies;
 
 public class NewReleaseMovie extends Movie {
     public static final int NEW_RELEASE = 1;
@@ -8,7 +8,6 @@ public class NewReleaseMovie extends Movie {
 
     @Override
     public double statement() {
-        double thisAmount = 0;
-        return thisAmount;
+        return 0;
     }
 }

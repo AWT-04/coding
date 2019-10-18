@@ -1,12 +1,11 @@
-package org.fundacionjala.coding.Raul.movies;
+package org.fundacionjala.coding.Raul.test;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class MainTest {
 
     @Test
     public void main() {
+        // Do nothing because of X and Y.
     }
 }

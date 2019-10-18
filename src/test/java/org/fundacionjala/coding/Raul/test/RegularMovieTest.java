@@ -1,9 +1,8 @@
-package org.fundacionjala.coding.Raul.movies;
+package org.fundacionjala.coding.Raul.test;
 
+import org.fundacionjala.coding.raul.movies.RegularMovie;
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class RegularMovieTest {
 
@@ -17,12 +16,12 @@ public class RegularMovieTest {
     }
 
     @Test
-    public void GetTitleWithConstructor(){
+    public void getTitleWithConstructor(){
         Assert.assertEquals(regularMovie.getTitle(), "The king");
     }
 
     @Test
-    public void GetPriceWithConstructor(){
+    public void getPriceWithConstructor(){
         Assert.assertEquals(regularMovie.getPriceCode(), 15);
     }
 }

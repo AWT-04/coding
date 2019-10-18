@@ -1,5 +1,6 @@
-package org.fundacionjala.coding.Raul.movies;
+package org.fundacionjala.coding.Raul.test;
 
+import org.fundacionjala.coding.raul.movies.NewReleaseMovie;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -13,12 +14,12 @@ public class NewReleaseMovieTest {
     }
 
     @Test
-    public void GetTitleWithConstructor(){
+    public void getTitleWithConstructor(){
         Assert.assertEquals(newReleaseMovie.getTitle(), "The lion king");
     }
 
     @Test
-    public void GetPriceWithConstructor(){
+    public void getPriceWithConstructor(){
         Assert.assertEquals(newReleaseMovie.getPriceCode(), 30);
     }
 }

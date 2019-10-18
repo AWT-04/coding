@@ -1,20 +1,20 @@
-package org.fundacionjala.coding.Raul.movies;
+package org.fundacionjala.coding.raul.movies;
 
 class Rental {
-    private Movie _movie;
-    private int _daysRented;
+    private Movie movie;
+    private int daysRented;
 
     public Rental(Movie movie, int daysRented) {
-        _movie = movie;
-        _daysRented = daysRented;
+        this.movie = movie;
+        this.daysRented = daysRented;
     }
 
     public int getDaysRented() {
-        return _daysRented;
+        return daysRented;
     }
 
     public Movie getMovie() {
-        return _movie;
+        return movie;
     }
     public double statement(Movie movie){
         double thisAmount = movie.statement();
