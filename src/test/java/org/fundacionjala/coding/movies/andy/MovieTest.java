@@ -1,6 +1,5 @@
-package movies;
+package org.fundacionjala.coding.movies.andy;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -10,25 +9,25 @@ public class MovieTest {
     public static final int CHILDRENS = 2;
     public static final int REGULAR = 0;
     public static final int NEW_RELEASE = 1;
-    private String _title;
-    private int _priceCode;
+    private final int arg = 3;
+    private String title;
+    private int priceCode;
 
     @Test(expected = AssertionError.class)
     public void getPriceCode() {
 
-        assertEquals(_priceCode,5);
+        assertEquals(CHILDRENS, priceCode);
     }
 
     @Test(expected = AssertionError.class)
     public void setPriceCode() {
-        int arg = 3;
-        _priceCode = CHILDRENS * REGULAR * NEW_RELEASE;
-        assertEquals(_priceCode, arg);
+        priceCode = CHILDRENS * REGULAR * NEW_RELEASE;
+        assertEquals(priceCode, arg);
     }
 
     @Test(expected = AssertionError.class)
     public void getTitle() {
-        _title = null;
-        assertEquals(_title,"Title");
+        title = null;
+        assertEquals("Title", title);
     }
 }
