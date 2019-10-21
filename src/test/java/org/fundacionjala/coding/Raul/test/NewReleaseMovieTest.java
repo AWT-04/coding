@@ -17,7 +17,7 @@ public class NewReleaseMovieTest {
 
     @Test
     public void getTitleWithConstructor() {
-        Assert.assertEquals("The lion king", newReleaseMovie.getTitle() );
+        Assert.assertEquals("The lion king", newReleaseMovie.getTitle());
     }
 
     @Test

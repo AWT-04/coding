@@ -24,6 +24,6 @@ public class RegularMovieTest {
 
     @Test
     public void getPriceWithConstructor() {
-        Assert.assertEquals( PRICE, regularMovie.getPriceCode());
+        Assert.assertEquals(PRICE, regularMovie.getPriceCode());
     }
 }
