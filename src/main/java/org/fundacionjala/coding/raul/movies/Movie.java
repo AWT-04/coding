@@ -4,7 +4,7 @@ public abstract class Movie {
     private String title;
     private int priceCode;
 
-    public Movie(String title, int priceCode) {
+    public Movie(final String title, int priceCode) {
         this.title = title;
         this.priceCode = priceCode;
     }

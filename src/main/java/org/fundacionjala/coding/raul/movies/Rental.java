@@ -1,10 +1,15 @@
 package org.fundacionjala.coding.raul.movies;
 
+import java.util.logging.Logger;
+
 class Rental {
     private Movie movie;
     private int daysRented;
+    private static final double INCREMENT = 1.5;
+    private static final int THREE = 3;
 
-    public Rental(Movie movie, int daysRented) {
+
+    Rental(final Movie movie, int daysRented) {
         this.movie = movie;
         this.daysRented = daysRented;
     }
@@ -16,30 +21,32 @@ class Rental {
     public Movie getMovie() {
         return movie;
     }
-    public double statement(Movie movie){
+    public double statement(final Movie movie) {
         double thisAmount = movie.statement();
-        switch (movie.getPriceCode()){
+        switch (movie.getPriceCode()) {
             case 0:
                 thisAmount += 2;
-                if (getDaysRented() > 2)
-                    thisAmount += (getDaysRented() - 2) * 1.5;
+                if (getDaysRented() > 2) {
+                    thisAmount += (getDaysRented() - 2) * INCREMENT;
+                }
                 break;
             case 1:
-                thisAmount += getDaysRented() * 3;
+                thisAmount += getDaysRented() * THREE;
                 break;
             case 2:
-                if (getDaysRented() > 3)
-                    thisAmount += (getDaysRented() - 3) * 1.5;
+                if (getDaysRented() > THREE) {
+                    thisAmount += (getDaysRented() - THREE) * INCREMENT;
+                }
                 break;
             default:
-                System.out.println("the price code selected is not present in the system");
+                Logger.getLogger("the price code selected is not present in the system");
                 break;
         }
         return thisAmount;
     }
-    public int frequentRenterPoints(Movie movie){
+    public int frequentRenterPoints(final Movie movie) {
         int frequentRenterPoints = 0;
-        switch (movie.getPriceCode()){
+        switch (movie.getPriceCode()) {
             case 0:
                 // add frequent renter points
                 frequentRenterPoints++;
@@ -53,11 +60,12 @@ class Rental {
                 frequentRenterPoints++;
 
                 // add bonus for a two day new release rental
-                if (getDaysRented() > 1)
+                if (getDaysRented() > 1) {
                     frequentRenterPoints++;
+                }
                 break;
             default:
-                System.out.println("the price code selected is not present in the system");
+                Logger.getLogger("the price code selected is not present in the system");
                 break;
         }
         return frequentRenterPoints;

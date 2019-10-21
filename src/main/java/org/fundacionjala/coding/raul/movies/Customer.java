@@ -1,18 +1,16 @@
 package org.fundacionjala.coding.raul.movies;
 
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.Vector;
+import java.util.LinkedList;
 
 class Customer {
     private String name;
-    private Vector rentals = new Vector();
+    private LinkedList<Rental> rentals = new LinkedList();
 
-    public Customer(String name) {
+    Customer(final String name) {
         this.name = name;
     }
 
-    public void addRental(Rental arg) {
+    public void addRental(final Rental arg) {
 
         rentals.add(arg);
     }
@@ -25,12 +23,12 @@ class Customer {
     public String statement() {
         double totalAmount = 0;
         int frequentRenterPoints = 0;
-        Enumeration rentals = this.rentals.elements();
+        LinkedList<Rental> rentales = this.rentals;
         String result = "Rental Record for " + getName() + "\n";
 
-        while (rentals.hasMoreElements()) {
+        while (!rentales.isEmpty()) {
             double thisAmount = 0;
-            Rental each = (Rental) rentals.nextElement();
+            Rental each = rentales.element();
             //determine amounts for each line
             thisAmount = each.statement(each.getMovie());
 
@@ -38,16 +36,12 @@ class Customer {
             frequentRenterPoints = each.frequentRenterPoints(each.getMovie());
 
             //show figures for this rental
-            result += "\t" + each.getMovie().getTitle() + "\t" +
-                    thisAmount + "\n";
+            result = "\t" + each.getMovie().getTitle() + "\t" + thisAmount + "\n";
             totalAmount += thisAmount;
         }
         //add footer lines
-        result += "Amount owed is " + totalAmount +
-                "\n";
-        result += "You earned " + frequentRenterPoints
-                +
-                " frequent renter points";
+        result += "Amount owed is " + totalAmount + "\n";
+        result += "You earned " + frequentRenterPoints + " frequent renter points";
         return result;
     }
 }

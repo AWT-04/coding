@@ -5,21 +5,24 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class ChildrenMovieTest {
-    ChildrenMovie childrenMovie = new ChildrenMovie("Lion", 13);
+    private static final int PRICE = 13;
+    private static final int PRICECODE = 13;
+    private static final double INCREMENT = 1.5;
+    private final ChildrenMovie childrenMovie = new ChildrenMovie("Lion", PRICE);
     @Test
     public void statement() {
         double thisAmount = 0;
-        thisAmount += 1.5;
-        Assert.assertTrue(thisAmount==1.5);
+        thisAmount += INCREMENT;
+        Assert.assertTrue(thisAmount == INCREMENT);
     }
 
     @Test
-    public void getTitleWithConstructor(){
-        Assert.assertEquals(childrenMovie.getTitle(), "Lion");
+    public void getTitleWithConstructor() {
+        Assert.assertEquals("Lion", childrenMovie.getTitle());
     }
 
     @Test
-    public void getPriceWithConstructor(){
-        Assert.assertEquals(childrenMovie.getPriceCode(), 13);
+    public void getPriceWithConstructor() {
+        Assert.assertEquals(PRICECODE, childrenMovie.getPriceCode());
     }
 }
