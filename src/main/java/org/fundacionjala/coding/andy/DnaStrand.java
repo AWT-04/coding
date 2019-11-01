@@ -2,7 +2,7 @@ package org.fundacionjala.coding.andy;
 
 /**
  * @author lazaro on 10/28/2019.
- *
+ * coding.
  */
 public final class DnaStrand {
     private DnaStrand() { }
