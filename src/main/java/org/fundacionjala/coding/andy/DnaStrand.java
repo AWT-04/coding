@@ -24,7 +24,6 @@ public final class DnaStrand {
                     bld.append('C');
                     break;
                 default:
-                    bld.append(dna.charAt(i));
                     break;
             }
         }
