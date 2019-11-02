@@ -27,9 +27,7 @@ public final class SortTheInnerContent {
             result.append(test);
             result.append(word.charAt(size));
         } else {
-            if (word.length() == 1) {
-                result.append(word.charAt(size));
-            }
+            result.append(word.charAt(size));
         }
     }
 
