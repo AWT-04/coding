@@ -11,7 +11,7 @@ public class RegularMovieTest {
     private RegularMovie regularMovie;
 
     @Before
-    public void setup(){
+    public void setup() {
         regularMovie = new RegularMovie("Lion", PRICE);
     }
 

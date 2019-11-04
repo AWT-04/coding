@@ -11,7 +11,7 @@ public class NewReleaseMovieTest {
     private NewReleaseMovie newReleaseMovie;
 
     @Before
-    public void setup(){
+    public void setup() {
         newReleaseMovie = new NewReleaseMovie("The lion king", PRICE);
     }
 

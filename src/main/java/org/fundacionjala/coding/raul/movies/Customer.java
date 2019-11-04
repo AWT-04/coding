@@ -7,7 +7,7 @@ public class Customer {
     private String name;
     private List<Rental> rentals;
 
-    public Customer(String name, List<Rental> rentals) {
+    public Customer(final String name, final List<Rental> rentals) {
         this.name = name;
         this.rentals = rentals;
     }

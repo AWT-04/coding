@@ -12,7 +12,7 @@ public class ChildrenMovieTest {
     private ChildrenMovie childrenMovie;
 
     @Before
-    public void setup(){
+    public void setup() {
         childrenMovie = new ChildrenMovie("Lion", PRICE);
     }
 
