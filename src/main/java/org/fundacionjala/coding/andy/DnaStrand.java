@@ -8,25 +8,12 @@ public final class DnaStrand {
     private DnaStrand() { }
 
     public static String makeComplement(final String dna) {
-        StringBuilder bld = new StringBuilder();
-        for (int i = 0; i < dna.length(); i++) {
-            switch (dna.charAt(i)) {
-                case 'T':
-                    bld.append('A');
-                    break;
-                case 'A':
-                    bld.append('T');
-                    break;
-                case 'C':
-                    bld.append('G');
-                    break;
-                case 'G':
-                    bld.append('C');
-                    break;
-                default:
-                    break;
-            }
-        }
-        return bld.toString();
+        String dna1 = dna.replace("A", "X");
+        dna1 = dna1.replace("T", "A");
+        dna1 = dna1.replace("X", "T");
+        dna1 = dna1.replace("C", "X");
+        dna1 = dna1.replace("G", "C");
+        dna1 = dna1.replace("X", "G");
+        return dna1;
     }
 }
