@@ -1,11 +1,11 @@
 package com.company;
 
-class EANValidator {
+public class EANValidator {
 
     private EANValidator() {
     }
 
-    static boolean validate(final String eanCode) {
+    public static boolean validate(final String eanCode) {
         int sum = 0;
         int num = 0;
         for (int i = 0; i < eanCode.length()-1; i++) {
