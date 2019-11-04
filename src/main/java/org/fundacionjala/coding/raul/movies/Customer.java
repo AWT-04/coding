@@ -1,18 +1,24 @@
 package org.fundacionjala.coding.raul.movies;
 
 import java.util.LinkedList;
+import java.util.List;
 
-class Customer {
+public class Customer {
     private String name;
-    private LinkedList<Rental> rentals = new LinkedList();
+    private List<Rental> rentals;
 
-    Customer(final String name) {
+    public Customer(String name, List<Rental> rentals) {
+        this.name = name;
+        this.rentals = rentals;
+    }
+
+    public Customer(final String name) {
         this.name = name;
     }
 
-    public void addRental(final Rental arg) {
+    public void addRental(final Rental rental) {
 
-        rentals.add(arg);
+        rentals.add(rental);
     }
 
     public String getName() {
@@ -23,25 +29,26 @@ class Customer {
     public String statement() {
         double totalAmount = 0;
         int frequentRenterPoints = 0;
-        LinkedList<Rental> rentales = this.rentals;
-        String result = "Rental Record for " + getName() + "\n";
+        LinkedList<Rental> rentales = (LinkedList<Rental>) this.rentals;
+        StringBuilder result = new StringBuilder();
+        result.append("Rental Record for " + getName() + "\n");
 
         while (!rentales.isEmpty()) {
             double thisAmount = 0;
             Rental each = rentales.element();
             //determine amounts for each line
-            thisAmount = each.statement(each.getMovie());
+            each.statement(each.getMovie());
 
             // add bonus for a two day new release rental
-            frequentRenterPoints = each.frequentRenterPoints(each.getMovie());
+            each.frequentRenterPoints(each.getMovie());
 
             //show figures for this rental
-            result = "\t" + each.getMovie().getTitle() + "\t" + thisAmount + "\n";
+            result.append("\t" + each.getMovie().getTitle() + "\t" + thisAmount + "\n");
             totalAmount += thisAmount;
         }
         //add footer lines
-        result += "Amount owed is " + totalAmount + "\n";
-        result += "You earned " + frequentRenterPoints + " frequent renter points";
-        return result;
+        result.append("Amount owed is " + totalAmount + "\n");
+        result.append("You earned " + frequentRenterPoints + " frequent renter points");
+        return result.toString();
     }
 }
