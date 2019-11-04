@@ -1,6 +1,7 @@
 package com.company;
 
-class DnaStrand {
+public class DnaStrand {
+
     private DnaStrand() {
     }
 
