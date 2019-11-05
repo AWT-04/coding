@@ -1,45 +1,28 @@
 package org.fundacionjala.coding.fernandokatas;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.StringJoiner;
 
 public final class SortTheInnerContent {
     private SortTheInnerContent() {
     }
 
-    public static String sortTheInnerContent(final String words) {
-        StringBuilder result = new StringBuilder();
+    public static String sortTheInnerContent(String words) {
         String[] sortWord = words.split(" ");
-        for (int i = 0; i < sortWord.length; i++) {
-            revertInnerWord(sortWord[i], result);
-            if (i < sortWord.length - 1) {
-                result.append(" ");
+        StringJoiner join = new StringJoiner(" ");
+        String[] result;
+        for (String listWord : sortWord) {
+            result = listWord.split("");
+            if (result.length > 3) {
+                Arrays.sort(result, 1, result.length - 1,
+                        Collections.reverseOrder());
             }
-        }
-        return result.toString();
-    }
+            join.add(String.join("", result));
 
-    public static void revertInnerWord(final String word, final StringBuilder result) {
-        int size = word.length() - 1;
-        if (word.length() >= 2) {
-            result.append(word.charAt(0));
-            char[] test = word.substring(1, size).toCharArray();
-            descOrder(test);
-            result.append(test);
-            result.append(word.charAt(size));
-        } else {
-            result.append(word.charAt(size));
         }
-    }
-
-    public static void descOrder(final char[] descOrder) {
-        Arrays.sort(descOrder);
-        int size = descOrder.length;
-        char temp;
-        for (int i = 0; i < size / 2; i++) {
-            temp = descOrder[i];
-            descOrder[i] = descOrder[size - i - 1];
-            descOrder[size - i - 1] = temp;
-        }
+        return join.toString();
     }
 }
 
