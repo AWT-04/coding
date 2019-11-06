@@ -8,12 +8,11 @@ public final class DnaStrand {
     private DnaStrand() { }
 
     public static String makeComplement(final String dna) {
-        String dna1 = dna.replace("A", "X");
-        dna1 = dna1.replace("T", "A");
-        dna1 = dna1.replace("X", "T");
-        dna1 = dna1.replace("C", "X");
-        dna1 = dna1.replace("G", "C");
-        dna1 = dna1.replace("X", "G");
-        return dna1;
+        return dna.replace("A", "X")
+        .replace("T", "A")
+        .replace("X", "T")
+        .replace("C", "X")
+        .replace("G", "C")
+        .replace("X", "G");
     }
 }
