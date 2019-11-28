@@ -8,7 +8,7 @@ public final class FindCountMostFrequent {
     }
 
     public static int findCount(final int[] digits) {
-        Map<Integer, Integer> integerHashMap = new HashMap<Integer, Integer>();
+        Map<Integer, Integer> integerHashMap = new HashMap<>();
 
         for (int i = 0; i < digits.length; i++) {
             int key = digits[i];
@@ -20,10 +20,9 @@ public final class FindCountMostFrequent {
                 integerHashMap.put(key, 1);
             }
         }
-        int maxCount = 0, res = -1;
+        int maxCount = 0;
         for (Map.Entry<Integer, Integer> val : integerHashMap.entrySet()) {
             if (maxCount < val.getValue()) {
-                res = val.getKey();
                 maxCount = val.getValue();
             }
         }
