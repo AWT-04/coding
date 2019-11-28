@@ -15,19 +15,18 @@ public class MovieTest {
 
     @Test(expected = AssertionError.class)
     public void getPriceCode() {
-
-        assertEquals(CHILDRENS, priceCode);
+        assertEquals(CHILDRENS, this.priceCode);
     }
 
     @Test(expected = AssertionError.class)
     public void setPriceCode() {
-        priceCode = CHILDRENS * REGULAR * NEW_RELEASE;
-        assertEquals(priceCode, arg);
+        this.priceCode = CHILDRENS * REGULAR * NEW_RELEASE;
+        assertEquals(this.priceCode, arg);
     }
 
     @Test(expected = AssertionError.class)
     public void getTitle() {
-        title = null;
-        assertEquals("Title", title);
+        this.title = null;
+        assertEquals("Title", this.title);
     }
 }

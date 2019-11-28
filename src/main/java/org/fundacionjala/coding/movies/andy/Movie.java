@@ -8,15 +8,14 @@ public  abstract class Movie {
         this.priceCode = priceCode;
     }
     public int getPriceCode() {
-
-        return priceCode;
+        return this.priceCode;
     }
 
     public void setPriceCode(int arg) {
-        priceCode = arg;
+        this.priceCode = arg;
     }
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public abstract double statement(int days);

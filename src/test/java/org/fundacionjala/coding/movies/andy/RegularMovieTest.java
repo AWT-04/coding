@@ -12,8 +12,10 @@ public class RegularMovieTest {
 
     @Test
     public void statement() {
-
-        assertNotEquals(REGULAR, REGULAR * days);
+        double thisAmount = 0;
+        thisAmount = thisAmount + REGULAR;
+        thisAmount += 2;
+        assertNotEquals(thisAmount, REGULAR * days);
     }
 
     @Test(expected = AssertionError.class)

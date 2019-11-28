@@ -24,6 +24,7 @@ public class RentalTest {
     public void getMovie() {
         movie.getClass().getName();
         assertNotEquals(movie, "Movie");
+        assertEquals(movie.getPriceCode(),3);
     }
 
     @Test(expected = NullPointerException.class)
