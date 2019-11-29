@@ -12,7 +12,7 @@ public class RentalTest {
     private int daysRented;
     private final int daysRented2 = 5;
     private Movie movie1;
-    private int priceCode = 3;
+    private final int priceCode = 3;
 
     @Test
     public void getDaysRented() {
