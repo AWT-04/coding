@@ -15,7 +15,6 @@ public class KataFindMostFrecuenceItemTest {
 
     @Test
     public void mostFrequentItemCount() {
-
         assertEquals(expected1, KataFrecuenceItem.mostFrequentItemCount(array1));
         assertEquals(expected2, KataFrecuenceItem.mostFrequentItemCount(array2));
     }

@@ -23,8 +23,6 @@ public final class KataFrecuenceItem {
                 }
                 j++;
             }
-
-
         }
         return majorFrecunece;
     }
