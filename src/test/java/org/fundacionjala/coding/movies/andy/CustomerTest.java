@@ -37,7 +37,7 @@ public class CustomerTest {
         each = new Rental(movie, 2);
         assertEquals(each.statement(movie), 2);
         assertNotNull(each.getMovie().getTitle());
-        assertEquals(each.frequentRenterPoints(movie),1);
+        assertEquals(each.frequentRenterPoints(movie), 1);
     }
 
     @Test
@@ -45,6 +45,6 @@ public class CustomerTest {
         RegularMovie movie = new RegularMovie(movieTitle, 1);
         each = new Rental(movie, 2);
         assertEquals(each.frequentRenterPoints(movie), 1);
-        assertEquals(each.getMovie().getClass().getSimpleName(),"RegularMovie");
+        assertEquals(each.getMovie().getClass().getSimpleName(), "RegularMovie");
     }
 }
